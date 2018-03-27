@@ -12,7 +12,6 @@ public class CharacterReplacer {
 
     public static void main(String args[]) {
         CharacterReplacer replacer = new CharacterReplacer();
-
         ArrayList<Character> originalList = replacer.getOriginalText();
         ArrayList<Character> replaceIndicatorList = replacer.getReplaceIndicator();
         ArrayList<Character> originalFrequencyList = replacer.getOriginalFrequencyList();
@@ -95,8 +94,14 @@ public class CharacterReplacer {
         }
 
         if (printWriter != null) {
+            int counter = 0;
             for (Character aChar : resultList) {
+                counter++;
                 printWriter.print(aChar);
+                if (counter == 52) {
+                    printWriter.println();
+                    counter = 0;
+                }
             }
             printWriter.close();
         }
