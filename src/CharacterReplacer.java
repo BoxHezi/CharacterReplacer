@@ -5,9 +5,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CharacterReplacer {
+    // original text
     private static final String originalText = "original.txt";
+    // char frequency in the original text
     private static final String originalFrequency = "originalFrequency.txt";
+    // indicate replace text
     private static final String replaceIndicator = "replace.txt";
+    // output plain text file
     private static final String outputFileName = "output.txt";
 
     public static void main(String args[]) {
